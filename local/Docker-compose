@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  gateway-api:
+    build:
+      context: ./gateway-api
+    ports:
+      - "6001:6001"
+    environment:
+      - AZURE_TENANT_ID=${AZURE_TENANT_ID}
+      - AZURE_CLIENT_ID=${AZURE_CLIENT_ID}
+      - AZURE_CLIENT_SECRET=${AZURE_CLIENT_SECRET}
+      - AZURE_OBO_SCOPE=${AZURE_OBO_SCOPE}
+      - RESOURCE_API_URL=http://resource-api:6002/protected
+    networks:
+      - dapr-net
+
+  resource-api:
+    build:
+      context: ./resource-api
+    ports:
+      - "6002:6002"
+    networks:
+      - dapr-net
+
+networks:
+  dapr-net:
+    driver: bridge
