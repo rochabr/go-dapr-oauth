@@ -22,7 +22,7 @@ This demo showcases a Go microservice architecture using [Dapr](https://dapr.io/
 
 ### Configure Azure AD (Mock or Real)
 
-Follow instructions in [AZURE.md](AZURE.md)
+Follow instructions in [AZURE.md](AZURE.md) or run the [azure.sh](./script/azure.sh) script to create the applications.
 
 ### Environment Variables
 
@@ -66,7 +66,7 @@ Expected output:
 
 ---
 
-## 🚀 Kubernetes Deployment
+<!-- ## 🚀 Kubernetes Deployment
 
 1. Ensure Dapr is installed: `dapr init -k`
 
@@ -77,8 +77,10 @@ kubectl apply -f k8s/
 ```
 
 3. Update `dapr-components.yaml` with your Azure credentials and JWKS URL.
+-->
 
 ---
 
 ## 📄 License
+
 MIT © Diagrid
