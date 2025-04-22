@@ -22,15 +22,7 @@ This demo showcases a Go microservice architecture using [Dapr](https://dapr.io/
 
 ### Configure Azure AD (Mock or Real)
 
-1. Register 2 apps in Azure:
-   - **Client app** (Postman or frontend)
-   - **API app** (gateway-api)
-2. Note the following:
-   - Tenant ID
-   - Client ID and secret
-   - Audience (App ID URI)
-   - JWKS URL (Azure: `https://login.microsoftonline.com/<tenant>/discovery/v2.0/keys`)
-3. Replace placeholder values in `components/oauth2.yaml`
+Follow instructions in [AZURE.md](AZURE.md)
 
 ### Environment Variables
 
